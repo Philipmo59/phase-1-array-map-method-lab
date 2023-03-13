@@ -12,16 +12,13 @@ const tutorials = [
 ];
 
 
-
-
-
-const titleCased = () => {
+const titleCased = () =>{
   return tutorials.map((line) => {
-    const items = line.split(' ');
-    const capitalizedItems = items.map(
+    const sentence = line.split(" ");
+    const capitalizedWord = sentence.map(
       (item) => item.charAt(0).toUpperCase() + item.slice(1)
     );
-    const response = capitalizedItems.join(' ');
-    return response;
+    const unitedSentence = capitalizedWord.join(" ");
+    return unitedSentence
   });
 };
