@@ -15,8 +15,13 @@ const tutorials = [
 
 
 
-const titleCased = tutorials.map(function(tutorial){
-  console.log(tutorial.titleCased)
-})
-
-
+const titleCased = () => {
+  return tutorials.map((line) => {
+    const items = line.split(' ');
+    const capitalizedItems = items.map(
+      (item) => item.charAt(0).toUpperCase() + item.slice(1)
+    );
+    const response = capitalizedItems.join(' ');
+    return response;
+  });
+};
